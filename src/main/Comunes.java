@@ -1,27 +1,21 @@
+package ArrayssII;
+
 public class Comunes {
 
-    public static String comunes (int[] a, int[] b){
-        String resultado = "";
-
-        for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < b.length; j++) {
-                if (a[i] == b[j]) {
-                    resultado += a[i] + " ";
-                    break;
+    public static String comunes(int[] llista1, int[] llista2){
+        String comuns="";
+        for (int i = 0; i < llista1.length; i++) {
+            for (int j = 0; j < llista2.length; j++) {
+                if(llista1[i]==llista2[j] ){
+                    comuns+=llista1[i]+" ";
                 }
             }
         }
-
-        return resultado;
+        return comuns;
     }
-
     public static void main(String[] args) {
-        int[] a = {2, 4, 8, 3, 5};
-        int[] b = {9, 1, 2, 3, 5};
-
-        System.out.println(comunes(a, b));
-
+        int [] llista1={4,5,7,3};
+        int [] llista2={4,3,6,8};
+        System.out.println(comunes(llista1,llista2));
     }
 }
-
-
